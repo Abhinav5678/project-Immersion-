@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Aggregator Site</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <header>
+        <h1>News Aggregator</h1>
+        <div id="personalization">
+            <label for="topics">
+                <h3>Choose your topics:</h3>
+            </label>
+            <select id="topics" multiple>
+                <!-- Topics will be populated by JS -->
+            </select>
+            <button id="savePreferences">Save Preferences</button>
+        </div>
+    </header>
+    <nav id="category-filters">
+        <!-- Category buttons will be populated by JS -->
+    </nav>
+    <main>
+        <section id="news-feed">
+            <!-- News articles will be rendered here -->
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2024 News Aggregator</p>
+    </footer>
+    <script src="app.js"></script>
+</body>
+
+</html>
