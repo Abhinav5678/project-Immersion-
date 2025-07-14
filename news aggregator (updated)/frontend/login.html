@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - News Aggregator</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+
+<body class="login-page">
+    <header>
+        <div class="header-bar">
+            <h1>News Aggregator</h1>
+        </div>
+    </header>
+    <div style="text-align:center; font-size:1.6rem; font-weight:700; font-family:'Poppins', Arial, sans-serif; margin-top:0.7rem; margin-bottom:0.7rem; letter-spacing:1.5px; background: linear-gradient(90deg, #6e4cd6 0%, #b39ddb 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;">Login Page</div>
+    <main>
+        <section id="login-section">
+            <div class="login-alt-simple">
+                <button type="button">Login with Google</button>
+                <button type="button">Login with Facebook</button>
+                <button type="button">Login with Twitter</button>
+            </div>
+            <form id="login-form">
+                <h2 style="text-align:center; font-size:1.2rem; font-family:'Poppins',Arial,sans-serif; margin-bottom:1rem;">Login</h2>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password" required>
+                <button type="submit">Login</button>
+            </form>
+            <div id="login-status"></div>
+            <div class="new-account-section">
+                <span>New to News Aggregator?</span>
+                <a href="#" class="create-account-link">Create an account</a>
+            </div>
+        </section>
+    </main>
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-col social">
+                <div class="footer-title">Contact</div>
+                <div class="footer-social-icons">
+                    <a href="#" aria-label="Email"><i class="fas fa-envelope"></i></a>
+                    <a href="#" aria-label="Website"><i class="fas fa-globe"></i></a>
+                    <a href="#" aria-label="Phone"><i class="fas fa-phone"></i></a>
+                </div>
+            </div>
+            <div class="footer-col links">
+                <div class="footer-title">Quick Links</div>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Contact</a></li>
+                    <li><a href="#">About</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 News Aggregator. All Rights Reserved.
+        </div>
+    </footer>
+    <script>
+        const loginForm = document.getElementById('login-form');
+        const loginStatus = document.getElementById('login-status');
+        if (loginForm) {
+            loginForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                const email = document.getElementById('email').value.trim();
+                const password = document.getElementById('password').value.trim();
+                if (email && password) {
+                    loginStatus.textContent = 'Login successful! ';
+                    loginStatus.style.color = '#1a7f37';
+                    loginForm.reset();
+                } else {
+                    loginStatus.textContent = 'Please enter both email and password.';
+                    loginStatus.style.color = '#b33f3f';
+                }
+            });
+        }
+    </script>
+</body>
+
+</html>
